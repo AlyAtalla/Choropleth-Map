@@ -5,45 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US County Education Choropleth</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 20px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            background-color: #f4f4f4; 
-        }
-        #chart-container {
-            width: 100%;
-            max-width: 1000px;
+        #error-message {
+            color: red;
             text-align: center;
-        }
-        #choropleth {
-            width: 100%;
-            max-width: 960px;
-            height: auto;
-            border: 1px solid #ddd;
-        }
-        .county {
-            transition: fill 0.3s ease;
-        }
-        .county:hover {
-            opacity: 0.7;
-        }
-        .tooltip {
-            position: absolute;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-        .tooltip.visible {
-            opacity: 1;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -54,6 +19,7 @@
         <svg id="choropleth"></svg>
         <div id="tooltip" class="tooltip"></div>
         <div id="legend"></div>
+        <div id="error-message"></div>
     </div>
 
     <!-- Load D3 from CDN -->
