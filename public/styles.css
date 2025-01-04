@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  text-align: center;
+}
+
+#choropleth {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.county {
+  stroke: white;
+  stroke-width: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.county:hover {
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.legend-cell {
+  width: 30px;
+  height: 20px;
+  margin: 0 5px;
+}
